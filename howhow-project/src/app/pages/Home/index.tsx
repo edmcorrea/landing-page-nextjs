@@ -8,13 +8,13 @@ import Testimonials from '../../components/Testimonials'
 
 export default function Homepage() {
   return (
-    <body className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <Header />
       <Hero />
       <OurServices />
       <AboutUs />
       <Forms />
       <Testimonials />
-    </body>
+    </main>
   )
 }
