@@ -26,6 +26,8 @@ $primary-color: rgb(59 130 246);
           border: 1px solid $primary-color;
           border-radius: 30px;
           padding: 10px 16px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+
 
           a {
             color: $primary-color;

@@ -10,11 +10,11 @@ import './Home.scss';
 export default function Homepage() {
   return (
     <main className="homepage">
-      <div className="homepage-headerHero">
+      {/* <div className="homepage-headerHero">
         <Header />
         <Hero />
       </div>
-      <OurServices />
+      <OurServices /> */}
       <AboutUs />
       <ContactUs />
       <Testimonials />

@@ -4,9 +4,10 @@ export default function Carrousel() {
   const brands = ['aliexpress', 'epic', 'freefire', 'hbo', 'jbl', 'bytedance', 'meliuz', 'mondial', 'netflix', 'ontex', 'oreo', 'paramont', 'picpay', 'playstation', 'tiktok', 'universal'];
 
   return (
-    <section>
+    <section className="carrousel">
       {brands.map((brand) => (
         <Image
+          className="carrousel-image"
           key={brand}
           src={`https://www.howhow.com.br/brands/${brand}.svg`}
           alt={brand}

@@ -1,0 +1,54 @@
+$primary-color: rgb(59 130 246);
+$primary-color-blur: rgb(59 130 246/ 0.6);
+
+@mixin padraoStep {
+
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  &-company {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+
+    &-info {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      justify-content: center;
+      width: 40%;
+    }
+
+    &-score {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 40%;
+      gap: 30px;
+    }
+  }
+
+  &-clients {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.carrousel {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  &-image {
+    width: 80px;
+  }
+}
