@@ -8,7 +8,7 @@ export default function OurServices() {
   const [company, setCompany] = useState(true);
   
   return (
-    <section>
+    <section id="services">
       <p className="bg-slate-400">ourservices</p>
       <button
         className="profile-edit-btn"

@@ -2,7 +2,7 @@ import Carrousel from "./Carrousel";
 
 export default function AboutUs() {
   return (
-    <section>
+    <section id="about">
     <p className="bg-slate-400">aboutUs</p>
     <div>
       <section>

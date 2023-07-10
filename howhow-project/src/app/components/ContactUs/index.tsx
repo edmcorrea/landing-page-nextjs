@@ -3,7 +3,7 @@ import Forms from "../Forms";
 
 export default function ContactUs() {
   return (
-    <section>
+    <section id="contact">
     <p className="bg-slate-400">ContactUs</p>
     <div>
       <section>

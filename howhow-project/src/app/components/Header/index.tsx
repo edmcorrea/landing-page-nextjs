@@ -4,21 +4,22 @@ import Image from 'next/image'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import './Header.scss';
 
 export default function Header() {
   return (
-    <header className="">
+    <header className="header">
       <Navbar bg="transparent" expand="lg">
         <Container className="d-none d-lg-block text-start ms-lg-5">
-          <Navbar.Brand className="" href="/">
-          <Image
-            src="https://www.howhow.com.br/logo.svg"
-            alt="Vercel Logo"
-            className="dark:invert"
-            width={100}
-            height={24}
-            priority
-          />
+          <Navbar.Brand className="header-align" href="/">
+            <Image
+              src="https://www.howhow.com.br/logo.svg"
+              alt="howhow-logo"
+              className="dark:invert"
+              width={180}
+              height={24}
+              priority
+            />
           </Navbar.Brand>
         </Container>
         <Container>
@@ -28,25 +29,17 @@ export default function Header() {
             id="basic-navbar-nav"
           >
             <Nav className="ml-auto me-lg-5">
-              <Image
-                src="https://www.howhow.com.br/logo.svg"
-                alt="Vercel Logo"
-                className="dark:invert"
-                width={100}
-                height={24}
-                priority
-              />
-              <Nav.Link className="me-lg-2 link" href="#projects">
+              {/* <Nav.Link className="me-lg-2 link" href="#projects">
                 Home
-              </Nav.Link>
-              <Nav.Link className="me-lg-2 link" href="#projects">
-                Nossos Serviços
-              </Nav.Link>
-              <Nav.Link className="me-lg-2 link" href="#about">
+              </Nav.Link> */}
+              <Nav.Link className="me-lg-1 link" href="#about">
                 Sobre Nós
               </Nav.Link>
-              <Nav.Link className="me-lg-2 link" href="#footer">
-                Contatos
+              <Nav.Link className="me-lg-2 link" href="#services">
+                Nossos Serviços
+              </Nav.Link>
+              <Nav.Link className="me-lg-2 link" href="#contact">
+                Contato
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

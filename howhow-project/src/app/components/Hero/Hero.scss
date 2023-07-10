@@ -1,0 +1,54 @@
+$primary-color: rgb(59 130 246);
+
+.hero {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+  &-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 40%;
+
+      &-btns {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+
+        &-btn {
+          border: 1px solid $primary-color;
+          border-radius: 30px;
+          padding: 10px 16px;
+
+          a {
+            color: $primary-color;
+            font-weight: 700;
+            text-decoration: none;
+          }
+
+          &:hover {
+            background-color: $primary-color;
+            
+            a {
+              color: white;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1052px) {
+ header {
+          padding-bottom: 80px;
+      }
+}

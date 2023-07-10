@@ -1,6 +1,9 @@
 'use client'
 
 import Image from "next/image"
+import influencersDesk from "@/assets/Hero/heroDash.png"
+import './Hero.scss';
+
 
 
 export default function Hero() {
@@ -13,20 +16,46 @@ export default function Hero() {
   //   });
   // }
   return (
-    <div className="">
-      <p className="bg-slate-400">hero</p>
-      {/* <Image
-        src="https://www.amigoconstrutor.com.br/on/demandware.static/Sites-amigoConstrutor-Site/-/default/dw69cf4fbe/images/logo/logo_preferential.svg"
-        alt="Vercel Logo"
-        className="dark:invert"
-        width={100}
-        height={24}
-        priority
-      /> */}
-      <h1>Influenciadores influenciando positivamente o seu negócio</h1>
-      <h3>
-        A Howhow é uma empresa que conecta marcas a influenciadores, encerre longas esperas por campanhas ou e-mails. Nosso sistema centralizado acelera o marketing de influência, potencializando resultados.
-      </h3>
-    </div>
+    <section className="hero">
+      <div className="hero-container">
+        <section className="hero-container-info">
+          <h1>Influenciadores que impulsionam positivamente o seu negócio.</h1>
+          <h5>
+            A Howhow é uma empresa que conecta marcas a influenciadores, encerre longas esperas por campanhas ou e-mails. Nosso sistema centralizado acelera o marketing de influência, potencializando resultados.
+          </h5>
+          <div className="hero-container-info-btns">
+            <button
+              className="hero-container-info-btns-btn"
+              type="button"
+              // onClick={sendMail}
+            >
+              <a href="#services">
+                Sou Empresa
+              </a>
+            </button>
+            <button
+              className="hero-container-info-btns-btn"
+              type="button"
+              // onClick={sendMail}
+            >
+              <a href="#services">
+                Sou Influenciador
+              </a>
+            </button>
+          </div>
+        </section>
+        <section>
+          <Image
+            src={influencersDesk}
+            alt="influencersDesk"
+            className="dark:invert"
+            priority
+          />
+        </section>
+      </div>
+      <div className="hero-gif">
+        <p>Inserir gif</p>
+      </div>
+    </section>
   )
 }
