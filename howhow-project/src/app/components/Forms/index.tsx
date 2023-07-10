@@ -1,5 +1,6 @@
 'use client'
 
+import { requestMail } from "@/app/services/RequestMail/index.";
 import { useEffect, useState } from "react"
 
 export default function Forms() {
@@ -16,16 +17,18 @@ export default function Forms() {
     if (type === 'textarea') setDescription(value);
   };
 
-  // const sendMail = async () => {
-  //   try {
-  //     const user = await requestLogin('/login', { email, password });
-  //     setToken(user.token);
-  //     localStorage.setItem('user', JSON.stringify(user));
-  //     setUserRoleContext(user);
-  //   } catch (_error) {
-  //     setError(true);
-  //   }
-  // };
+  const sendMail = async () => {
+    const html = `Name: ${nome} \nEmail: ${email} \nDescription: ${description}`
+    
+    try {
+      await requestMail('/contact', { html });
+      setNome("");
+      setEmail("");
+      setDescription("");
+    } catch (_error) {
+      setError(true);
+    }
+  };
 
   useEffect(() => {
     const magicNumber = 3;
@@ -79,11 +82,15 @@ export default function Forms() {
           className="profile-edit-btn"
           type="button"
           disabled={ disableBtn }
-          // onClick={ sendMail }
+          onClick={ sendMail }
         >
-          Salvar
+          Enviar Mensagem
         </button>
       </form>
     </section>
   )
+}
+
+function setError(arg0: boolean) {
+  throw new Error("Function not implemented.");
 }

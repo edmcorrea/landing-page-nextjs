@@ -1,0 +1,3 @@
+interface IContact {
+  html: string;
+}

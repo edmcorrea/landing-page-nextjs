@@ -1,10 +1,10 @@
-// import axios from "axios";
+import axios from "axios";
 
-// export const api = axios.create({
-//   baseURL: `https://lumpy-order-production.up.railway.app`,
-// });
+export const api = axios.create({
+  baseURL: 'http://localhost:3001',
+});
 
-// export const requestMail = async (endpoint, body) => {
-//   const { data } = await api.post(endpoint, body);
-//   return data;
-// };
+export const requestMail = async (endpoint: string, body: IContact) => {
+  const { data } = await api.post(endpoint, body);
+  return data;
+};

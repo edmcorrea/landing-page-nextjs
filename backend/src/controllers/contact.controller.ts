@@ -7,7 +7,9 @@ export default class ContactController {
 
   ControllerSendEmail= async (request: Request, response: Response): Promise<void> => 
   {
-    const { html } = request.params;
+    const { html } = request.body;
+    console.log(html);
+    
   
     await this.contactService.SendMail(html);
 
