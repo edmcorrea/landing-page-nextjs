@@ -1,7 +1,7 @@
 'use client'
 
 import { requestMail } from "@/app/services/RequestMail/index.";
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 export default function Forms() {
   const [form, setForm] = useState({

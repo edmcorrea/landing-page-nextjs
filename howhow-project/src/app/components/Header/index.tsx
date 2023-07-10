@@ -28,6 +28,14 @@ export default function Header() {
             id="basic-navbar-nav"
           >
             <Nav className="ml-auto me-lg-5">
+              <Image
+                src="https://www.howhow.com.br/logo.svg"
+                alt="Vercel Logo"
+                className="dark:invert"
+                width={100}
+                height={24}
+                priority
+              />
               <Nav.Link className="me-lg-2 link" href="#projects">
                 Home
               </Nav.Link>
