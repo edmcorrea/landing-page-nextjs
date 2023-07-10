@@ -12,7 +12,7 @@ export default function Header() {
         <Container className="d-none d-lg-block text-start ms-lg-5">
           <Navbar.Brand className="" href="/">
           <Image
-            src="https://www.amigoconstrutor.com.br/on/demandware.static/Sites-amigoConstrutor-Site/-/default/dw69cf4fbe/images/logo/logo_preferential.svg"
+            src="https://www.howhow.com.br/logo.svg"
             alt="Vercel Logo"
             className="dark:invert"
             width={100}

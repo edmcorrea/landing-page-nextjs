@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Carrousel from "./Carrousel";
 
 export default function AboutUs() {

@@ -50,7 +50,6 @@ export default function Forms() {
 
   return (
     <section>
-      <p className="bg-slate-400">forms</p>
       <form className="profile-edit-info-container">
         <div className="profile-edit-info">
           <section className="profile-edit-info-input">
