@@ -5,6 +5,7 @@ const routers = Router();
 
 const contactController = new ContactController();
 
+// UTILIZAÇÃO DO MÉTODO POST POR EXISTIR REQUEST DE ENTRADA
 routers.post('/contact', contactController.ControllerSendEmail);
 
 export default routers;

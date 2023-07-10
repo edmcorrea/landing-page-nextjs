@@ -1,6 +1,7 @@
 // import { ILogin } from '../interfaces';
 import { SGMail } from '../utils/sgMail.util';
 
+// OPTOU-SE POR MANTER OS DADOS NO CONTROLLER E NO SERVICE, POIS NÃO SERÁ ACESSADO NENHUM CONTEÚDO NO DB
 export default class ContactService {
 
   msg = {
@@ -8,23 +9,19 @@ export default class ContactService {
     from: {
       name: 'Landing Page J Pster',
       email: process.env.FROM_EMAIL
-    }, // Use the email address or domain you verified above
-    subject: 'this is SUBJECT',
+    },
+    subject: 'Prospecção - Forms de contato da Empresa',
     text: 'this is TEXT',
-    html: '<strong>this is HTML</strong>',
+    // html: '<strong>this is HTML</strong>',
   };
 
-  SendMail = async () => {
+  SendMail = async (html: string) => {
     try {
-      await SGMail.send(this.msg);
+      await SGMail.send({ ...this.msg, html });
       console.log('Email sent sucess');
       
     } catch (error) {
       console.error(error);
-      
-      // if (error.response) {
-        //   console.error(error.response.body)
-        // }
     }
   }
 }

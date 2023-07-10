@@ -7,10 +7,10 @@ export default class ContactController {
 
   ControllerSendEmail= async (request: Request, response: Response): Promise<void> => 
   {
-    // const { codAtivo } = request.params;
+    const { html } = request.params;
   
-    const msn = await this.contactService.SendMail();
+    await this.contactService.SendMail(html);
 
-    response.status(200).json({message: 'Email Sent Sucess'});
+    response.status(201).json({message: 'Email Sent Sucess'});
   }
 }
