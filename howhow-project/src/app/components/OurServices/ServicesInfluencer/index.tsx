@@ -1,27 +1,27 @@
 'use client'
 
 import { APIServicesInfluencer } from "@/app/services/APIOurServices"
-import Image from "next/image"
+import Image from "next/image";
+// import '../OurServices.scss';
+
 
 export default function ServiceInfluencer() {
   return (
-    <section>
-      <p className="bg-slate-400">ServiceInfluencer</p>
-      <div>
+    <section className="serv-benefits">
       {APIServicesInfluencer.map((serv, idx) => (
-          <section key={idx}>
+          <div key={idx} className="serv-benefits-benefit">
             <Image
               src={serv.image}
               alt={`${serv.image}`}
+              className="serv-benefits-benefit-img"
               priority
             />
-            <div>
+            <section className="serv-benefits-benefit-info">
               <h2>{serv.title}</h2>
               <p>{serv.description}</p>
-            </div>
-          </section>
+            </section>
+          </div>
         ))}
-      </div>
     </section>
   )
 }

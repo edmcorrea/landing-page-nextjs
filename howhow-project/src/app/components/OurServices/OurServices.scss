@@ -1,0 +1,138 @@
+$primary-color: rgb(59 130 246);
+$primary-color-blur: rgb(59 130 246/ 0.6);
+
+@mixin padraoStep {
+  align-items: center;
+  border: 1px solid $primary-color;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 35vh;
+  justify-content: space-evenly;
+  padding: 6px 14px;
+  text-align: center;
+  width: 30%;
+}
+
+.services {
+  margin: 0 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &-introduc {
+      display: flex;
+      justify-content: center;
+
+      &-elements {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+
+    &-steps {
+      display: flex;
+      gap:10px;
+      height: 54vh;
+      
+      &-step {
+        &:nth-child(1){
+          @include padraoStep();
+          align-items: center;
+        }
+        &:nth-child(2){
+          @include padraoStep();
+          margin-top: 9vh;
+        }
+        &:nth-child(3){
+          @include padraoStep();
+          margin-top: 18vh;
+        }
+
+        h5 {
+          color: $primary-color-blur;
+        }
+
+        &-info {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+
+          h2 {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  &-btns {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 100px;
+    gap: 20px;
+
+    &-btn {
+      flex-grow: 1;
+      font-size: 25px;
+      color: $primary-color;
+      font-weight: 600;
+      border-radius: 30px;
+      border-bottom: 1px solid $primary-color;
+      width: 50%;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+      &-selected {
+        flex-grow: 1;
+        font-size: 25px;
+        color: white;
+        background-color: $primary-color;
+        font-weight: 600;
+        border-radius: 30px;
+        width: 50%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+
+      &:hover {
+      border: 1px solid $primary-color; 
+      }
+    }
+  }
+}
+
+.serv-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  &-benefit {
+    display: flex;
+    justify-content: center;
+
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+    }
+
+    &-img {
+      width: 40%;
+
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      text-align: center;
+      padding: 0 20px;
+      width: 40%;
+    }
+  }
+} 
