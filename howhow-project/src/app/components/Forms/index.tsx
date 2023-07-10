@@ -4,27 +4,34 @@ import { requestMail } from "@/app/services/RequestMail/index.";
 import { useEffect, useState } from "react"
 
 export default function Forms() {
-  const [nome, setNome] = useState("");
-  const [email, setEmail] = useState("");
-  const [description, setDescription] = useState("");
+  const [form, setForm] = useState({
+    nome: "",
+    email: "",
+    description: "",
+  });
   const [disableBtn, setDisableBtn] = useState(true);
 
-
-  const handleChange = (e: React.FormEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>): void => {
-    const { type, value } = e.currentTarget;
-    if (type === 'text') setNome(value);
-    if (type === 'email') setEmail(value);
-    if (type === 'textarea') setDescription(value);
+  const handleChange = (
+    e: React.FormEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>
+  ): void => {
+    const { name, value } = e.currentTarget;
+    setForm((prevForm) => ({
+      ...prevForm,
+      [name]: value,
+    }));
   };
 
   const sendMail = async () => {
-    const html = `Name: ${nome} \nEmail: ${email} \nDescription: ${description}`
-    
+    const { nome, email, description } = form;
+    const html = `Name: ${nome} \nEmail: ${email} \nDescription: ${description}`;
+
     try {
-      await requestMail('/contact', { html });
-      setNome("");
-      setEmail("");
-      setDescription("");
+      await requestMail("/contact", { html });
+      setForm({
+        nome: "",
+        email: "",
+        description: "",
+      });
     } catch (_error) {
       setError(true);
     }
@@ -33,15 +40,15 @@ export default function Forms() {
   useEffect(() => {
     const magicNumber = 3;
     const regexMail = /\S+@\S+\.\S+/;
+    const { email, description } = form;
     if (description.length >= magicNumber && regexMail.test(email)) {
-      return setDisableBtn(false);
+      setDisableBtn(false);
+    } else {
+      setDisableBtn(true);
     }
-
-    return setDisableBtn(true);
-  }, [email, description]);
+  }, [form]);
 
   return (
-    
     <section>
       <p className="bg-slate-400">forms</p>
       <form className="profile-edit-info-container">
@@ -51,9 +58,9 @@ export default function Forms() {
             <input
               placeholder="insira o seu nome"
               type="text"
-              name="name"
-              value={ nome }
-              onChange={ handleChange }
+              name="nome"
+              value={form.nome}
+              onChange={handleChange}
             />
           </section>
           <section className="profile-edit-info-input">
@@ -62,9 +69,8 @@ export default function Forms() {
               placeholder="Insira o seu e-mail"
               type="email"
               name="email"
-              value={ email }
-              onChange={ handleChange }
-
+              value={form.email}
+              onChange={handleChange}
             />
           </section>
           <section className="profile-edit-info-input">
@@ -72,23 +78,22 @@ export default function Forms() {
             <textarea
               placeholder="Insira a sua mensagem"
               name="description"
-              value={ description }
-              onChange={ handleChange }
-
+              value={form.description}
+              onChange={handleChange}
             />
           </section>
         </div>
         <button
           className="profile-edit-btn"
           type="button"
-          disabled={ disableBtn }
-          onClick={ sendMail }
+          disabled={disableBtn}
+          onClick={sendMail}
         >
           Enviar Mensagem
         </button>
       </form>
     </section>
-  )
+  );
 }
 
 function setError(arg0: boolean) {

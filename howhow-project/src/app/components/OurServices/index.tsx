@@ -1,8 +1,8 @@
 export default function OurServices() {
   return (
     <section>
-      <p className="bg-slate-400">services</p>
-      <div className="">
+      <p className="bg-slate-400">ourservices</p>
+      {/* <div className="">
         <h1>+6.916</h1>
         <h5>Campanhas realizadas</h5>
       </div>
@@ -23,8 +23,7 @@ export default function OurServices() {
         <h2>
           Mais de 30 marcas globais reconhecidas
         </h2>
-      </div>
+      </div> */}
     </section>
-
   )
 }

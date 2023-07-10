@@ -1,9 +1,9 @@
-import AboutUs from '../../components/AboutUs'
-import Forms from '../../components/Forms'
-import Header from '../../components/Header'
-import Hero from '../../components/Hero'
-import OurServices from '../../components/OurServices'
-import Testimonials from '../../components/Testimonials'
+import ContactUs from '@/app/components/ContactUs'
+import AboutUs from '@/app/components/AboutUs'
+import Header from '@/app/components/Header'
+import Hero from '@/app/components/Hero'
+import OurServices from '@/app/components/OurServices'
+import Testimonials from '@/app/components/Testimonials'
 
 
 export default function Homepage() {
@@ -13,7 +13,7 @@ export default function Homepage() {
       <Hero />
       <OurServices />
       <AboutUs />
-      <Forms />
+      <ContactUs />
       <Testimonials />
     </main>
   )
