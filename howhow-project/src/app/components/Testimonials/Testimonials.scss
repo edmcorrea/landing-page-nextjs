@@ -30,6 +30,11 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
     &-world {
       position: relative;
       opacity: 0.1;
+
+      &-mobile {
+        display: none;
+        opacity: 0.1;
+      }
     }
     &-person1 {
       @include padraoPerson();
@@ -42,8 +47,8 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
     }
     &-person1-info-show {
       @include padraoPersonInfo();
-      top: 10%;
-      left: 38%;
+      top: 3%;
+      left: 35%;
     }
     &-person2 {
       @include padraoPerson();
@@ -52,8 +57,44 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
     }
     &-person2-info-show {
       @include padraoPersonInfo();
-      top: 60%;
+      top: 50%;
       left: 35%;
+    }
+  }
+}
+
+@media (max-width: 892px) {
+  .testimonial {
+    width: 90%;
+    flex-direction: column;
+    &-container {
+      position: relative;
+  
+      &-world {
+        display: none;
+
+        &-mobile {
+          display: flex;
+          width: 100%;
+          margin: auto;
+        }
+      }
+      &-person1-info-hide, &-person1-info-show {
+        display: flex;
+        @include padraoPersonInfo();
+        top: 8%;
+        left: 30%;
+      }
+      &-person2-info-hide, &-person2-info-show {
+        display: flex;
+        @include padraoPersonInfo();
+        top: 55%;
+        left: 40%;
+      }
+
+      &-person2 {
+        left: 60%;
+      }
     }
   }
 }

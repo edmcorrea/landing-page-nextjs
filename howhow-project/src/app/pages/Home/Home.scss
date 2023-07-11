@@ -4,6 +4,7 @@ $primary-color: rgb(59 130 246);
   display: flex;
   flex-direction: column;
   gap: 100px;
+  align-items: center;
   
   &-headerHero {
     height: 100vh;
