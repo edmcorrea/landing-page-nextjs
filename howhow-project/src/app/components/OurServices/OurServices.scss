@@ -136,4 +136,50 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
       width: 40%;
     }
   }
-} 
+}
+
+@media (max-width: 992px) {
+  .services {
+
+    &-container-steps {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      height: 100%;
+
+      &-step {
+        &:nth-child(1), &:nth-child(2), &:nth-child(3){
+          width: 100%;
+          margin-top: 0;
+        }
+      }
+
+      &-score {
+        flex-direction: row;
+      }
+    }
+    &-clients {
+      width: 85%;
+      margin: auto;
+    }
+  }
+
+  .serv-benefits {
+    &-benefit {
+      flex-direction: column;
+      align-items: center;
+
+      &:nth-child(2n) {
+        flex-direction: column;
+      }
+
+      &-img {
+        width: 90%;
+      }
+  
+      &-info {
+        width: 90%;
+      }
+    }
+  }
+}

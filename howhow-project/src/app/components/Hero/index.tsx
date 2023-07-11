@@ -48,12 +48,14 @@ export default function Hero() {
         </section>
       </div>
       <div className="hero-gifContainer">
-        <Image
-          className="hero-gifContainer-gif"
-          src={notgif}
-          alt="notgif"
-          priority
-        />
+        <a href="#services">
+          <Image
+            className="hero-gifContainer-gif"
+            src={notgif}
+            alt="notgif"
+            priority
+          />
+        </a>
       </div>
     </section>
   )

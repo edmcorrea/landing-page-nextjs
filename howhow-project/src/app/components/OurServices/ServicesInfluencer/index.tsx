@@ -9,7 +9,7 @@ export default function ServiceInfluencer() {
   return (
     <section className="serv-benefits">
       {APIServicesInfluencer.map((serv, idx) => (
-          <div key={idx} className="serv-benefits-benefit hiddenY">
+          <div key={idx} className="serv-benefits-benefit">
             <Image
               src={serv.image}
               alt={`${serv.image}`}
