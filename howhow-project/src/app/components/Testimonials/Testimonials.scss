@@ -79,21 +79,35 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
           margin: auto;
         }
       }
+
       &-person1-info-hide, &-person1-info-show {
         display: flex;
         @include padraoPersonInfo();
         top: 8%;
-        left: 30%;
+        left: 10%;
+
+        h4 {
+          font-size: 15px;
+        }
       }
+
       &-person2-info-hide, &-person2-info-show {
         display: flex;
         @include padraoPersonInfo();
         top: 55%;
-        left: 40%;
+        left: 10%;
+        
+        h4 {
+          font-size: 15px;
+        }
+      }
+
+      &-person1 {
+        left: 30%;
       }
 
       &-person2 {
-        left: 60%;
+        left: 30%;
       }
     }
   }

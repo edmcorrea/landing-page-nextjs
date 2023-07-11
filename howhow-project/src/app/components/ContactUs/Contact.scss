@@ -17,6 +17,11 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
 
   &-info {
     @include padraoSet();
+
+    &-img {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &-forms {
@@ -67,7 +72,7 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
     margin: auto;
     width: 50%;
     border: 1px solid $primary-color;;
-    height: 35px;
+    min-height: 35px;
     padding: 0 10px;
     border-radius: 10px;
     font-weight: 700;

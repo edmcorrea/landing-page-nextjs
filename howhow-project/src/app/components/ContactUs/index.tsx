@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Forms from "../Forms";
 import './Contact.scss';
 
@@ -12,7 +13,17 @@ export default function ContactUs() {
       </section>
       <section className="hiddenY">
         <h4>Contato</h4>
-        <h4>contato@howhow.com</h4>
+        <p>contato@howhow.com</p>
+      </section>
+      <section className="contact-info-img">
+        <Image
+          src="https://www.howhow.com.br/logo.svg"
+          alt="howhow-logo"
+          className="dark:invert"
+          width={180}
+          height={24}
+          priority
+        />
       </section>
     </div>
     <div className="contact-forms hiddenX">

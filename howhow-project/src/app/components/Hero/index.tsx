@@ -2,13 +2,15 @@
 
 import Image from "next/image"
 import influencersDesk from "@/assets/Hero/heroDash.png"
-import notgif from "@/assets/notgif.png"
+import notgif from "@/assets/gif.gif"
 
 import './Hero.scss';
+import { useGlobalContext } from "@/app/services/Context-API";
 
 
 
 export default function Hero() {
+  const { setCompany } = useGlobalContext();
   return (
     <section className="hero">
       <div className="hero-container">
@@ -21,7 +23,7 @@ export default function Hero() {
             <button
               className="hero-container-info-btns-btn"
               type="button"
-              // onClick={sendMail}
+              onClick={() => setCompany(true)}
             >
               <a href="#services">
                 Sou Empresa
@@ -30,7 +32,7 @@ export default function Hero() {
             <button
               className="hero-container-info-btns-btn"
               type="button"
-              // onClick={sendMail}
+              onClick={() => setCompany(false)}
             >
               <a href="#services">
                 Sou Influenciador

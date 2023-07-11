@@ -2,13 +2,12 @@
 
 import { useState } from "react";
 import ServiceCompany from "./ServicesCompany";
-// import { useGlobalContext } from '../../services/Context-API';
+import { useGlobalContext } from '../../services/Context-API';
 import ServiceInfluencer from "./ServicesInfluencer";
 import './OurServices.scss';
 
 export default function OurServices() {
-  // const { company, setCompany } = useGlobalContext();
-  const [company, setCompany] = useState(true);
+  const { company, setCompany } = useGlobalContext();
   
   return (
     <section id="services" className="services">
