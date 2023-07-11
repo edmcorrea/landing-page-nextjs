@@ -1,22 +1,21 @@
 import Forms from "../Forms";
-
+import './Contact.scss';
 
 export default function ContactUs() {
   return (
-    <section id="contact">
-    <p className="bg-slate-400">ContactUs</p>
-    <div>
+    <section id="contact" className="contact">
+    <div className="contact-info">
       <section>
         <h2>Vamos conversar?</h2>
-        <h4>Complete o formulário para saber como a Howhow pode ajudar a sua marca a se conectar com influenciadores e alavancar suas campanhas.
-        </h4>
+        <h5>Complete o formulário para saber como a Howhow pode ajudar a sua marca a se conectar com influenciadores e alavancar suas campanhas.
+        </h5>
       </section>
       <section className="">
-        <h3>Contato</h3>
-        <h3>contato@howhow.com</h3>
+        <h4>Contato</h4>
+        <h4>contato@howhow.com</h4>
       </section>
     </div>
-    <div>
+    <div className="contact-forms">
       <Forms />
     </div>
   </section>

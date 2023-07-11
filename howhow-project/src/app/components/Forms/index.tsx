@@ -49,49 +49,54 @@ export default function Forms() {
   }, [form]);
 
   return (
-    <section>
-      <form className="profile-edit-info-container">
-        <div className="profile-edit-info">
-          <section className="profile-edit-info-input">
-            <h3>Nome</h3>
-            <input
-              placeholder="insira o seu nome"
-              type="text"
-              name="nome"
-              value={form.nome}
-              onChange={handleChange}
-            />
-          </section>
-          <section className="profile-edit-info-input">
-            <h3>E-mail</h3>
-            <input
-              placeholder="Insira o seu e-mail"
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-            />
-          </section>
-          <section className="profile-edit-info-input">
-            <h3>Descrição</h3>
-            <textarea
-              placeholder="Insira a sua mensagem"
-              name="description"
-              value={form.description}
-              onChange={handleChange}
-            />
-          </section>
-        </div>
-        <button
-          className="profile-edit-btn"
-          type="button"
-          disabled={disableBtn}
-          onClick={sendMail}
-        >
-          Enviar Mensagem
-        </button>
-      </form>
-    </section>
+    <form className="forms">
+      <div>
+      <h5>Contato</h5>
+      <h6>Digite as informações necessárias abaixo.</h6>
+      </div>
+      <div className="forms-inputs">
+        <section className="forms-inputs-containerInput">
+          <h6>Nome</h6>
+          <input
+            placeholder="Insira o seu nome"
+            type="text"
+            name="nome"
+            value={form.nome}
+            onChange={handleChange}
+            className="forms-inputs-containerInput-input"
+          />
+        </section>
+        <section className="forms-inputs-containerInput">
+          <h6>E-mail</h6>
+          <input
+            className="forms-inputs-containerInput-input"
+            placeholder="Insira o seu e-mail"
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+          />
+        </section>
+        <section className="forms-inputs-containerInput">
+          <h6>Descrição</h6>
+          <textarea
+            className="forms-inputs-containerInput-txtarea"
+            placeholder="Insira a sua mensagem"
+            name="description"
+            value={form.description}
+            onChange={handleChange}
+          />
+        </section>
+      </div>
+      <button
+        className="forms-btn"
+        type="button"
+        disabled={disableBtn}
+        onClick={sendMail}
+      >
+        Enviar Mensagem
+      </button>
+    </form>
   );
 }
 

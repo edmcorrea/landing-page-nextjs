@@ -1,22 +1,49 @@
-import Image from "next/image";
-import InfluencerDesk from '@/assets/influencersDesk.png';
-import InfluencerMobile from '@/assets/influencersMobile.png';
+"use client"
 
+import Image from "next/image";
+import person1 from '@/assets/testimonial/person1.jpg';
+import person2 from '@/assets/testimonial/person2.jpg';
+import worldMap from '@/assets/testimonial/world-map.jpg';
+import './Testimonials.scss';
+import { useState } from "react";
 
 export default function Testimonials() {
+  const [hover, setHover] = useState('hide');
   return (
-    <section>
-      <p className="bg-slate-400">testimonials</p>
+    <section className="testimonial">
+      <h3>Muitas Empresas e Influenciadores já aprovaram a <span>HowHow</span></h3>
+      <div className="testimonial-container">
         <Image
-          src={InfluencerDesk}
-          alt='InfluencerDesk'
+          className="testimonial-container-world"
+          src={worldMap}
+          alt='worldMap'
           priority
+          onMouseEnter={() => setHover('show')}
+          onMouseLeave={() => setHover('hide')}
         />
         <Image
-          src={InfluencerMobile}
-          alt='InfluencerMobile'
+          className="testimonial-container-person1"
+          src={person1}
+          alt='person1'
           priority
+          onMouseEnter={() => setHover('show')}
+          onMouseLeave={() => setHover('hide')}
         />
+        <div className={`testimonial-container-person1-info-${hover}`}>
+          <h4>{`"Howhow alavancou minhas vendas em 150%, através de um influenciador digital de moda feminina."`}</h4>
+        </div>
+        <Image
+          className="testimonial-container-person2"
+          src={person2}
+          alt='person2'
+          priority
+          onMouseEnter={() => setHover('show')}
+          onMouseLeave={() => setHover('hide')}
+        />
+        <div className={`testimonial-container-person2-info-${hover}`}>
+          <h4>{`"Sou influenciador e tive um grande reconhecimento público na área de games."`}</h4>
+        </div>
+      </div>
     </section>
 
   )

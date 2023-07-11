@@ -1,0 +1,59 @@
+$primary-color: rgb(59 130 246);
+$primary-color-blur: rgb(59 130 246/ 0.6);
+
+@mixin padraoPersonInfo {
+  align-items: center;
+  border-radius: 30px;
+  color: $primary-color;
+  position: absolute;
+  width: 300px;
+  text-align: center;
+  background-color: rgba(97, 94, 94, 0.3);
+  padding: 15px 20px;
+}
+
+@mixin padraoPerson {
+  position: absolute;
+  border-radius: 100%;
+  width: 150px;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+
+  &-container {
+    position: relative;
+
+    &-world {
+      position: relative;
+      opacity: 0.1;
+    }
+    &-person1 {
+      @include padraoPerson();
+      width: 200px;
+      top: 20%;
+      left: 50%;
+    }
+    &-person1-info-hide, &-person2-info-hide {
+      display: none;
+    }
+    &-person1-info-show {
+      @include padraoPersonInfo();
+      top: 10%;
+      left: 38%;
+    }
+    &-person2 {
+      @include padraoPerson();
+      top: 70%;
+      left: 30%;
+    }
+    &-person2-info-show {
+      @include padraoPersonInfo();
+      top: 60%;
+      left: 35%;
+    }
+  }
+}
