@@ -13,13 +13,13 @@ export default function OurServices() {
       <div className="services-container">
         <section className="services-container-introduc">
           <div className="services-container-introduc-elements">
-            <h5>Passo a passo</h5>
-            <h2>Como funciona uma campanha?</h2>
-            <p>Criar e acompanhar uma campanha de marketing na nossa plataforma é fácil!</p>
+            <h5 className="hiddenX">Passo a passo</h5>
+            <h2 className="hiddenX">Como funciona uma campanha?</h2>
+            <p className="hiddenY">Criar e acompanhar uma campanha de marketing na nossa plataforma é fácil!</p>
           </div>
         </section>
         <section className="services-container-steps">
-          <div className="services-container-steps-step">
+          <div className="services-container-steps-step hiddenY">
             <h5>Passo 01</h5>
             <section className="services-container-steps-step-info">
             <h2>Crie uma campanha</h2>
@@ -28,7 +28,7 @@ export default function OurServices() {
             </p>
             </section>
           </div>
-          <div className="services-container-steps-step">
+          <div className="services-container-steps-step hiddenY">
               <h5>Passo 02</h5>
               <section className="services-container-steps-step-info">
                 <h2>Escolha os influenciadores</h2>
@@ -37,7 +37,7 @@ export default function OurServices() {
                 </p>
               </section>
           </div>
-          <div className="services-container-steps-step">
+          <div className="services-container-steps-step hiddenY">
             <h5>Passo 03</h5>
             <section className="services-container-steps-step-info">
               <h2>Gerencie a sua campanha</h2>

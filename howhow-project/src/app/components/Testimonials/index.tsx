@@ -11,7 +11,7 @@ export default function Testimonials() {
   const [hover, setHover] = useState('hide');
   return (
     <section className="testimonial">
-      <h3>Muitas Empresas e Influenciadores já aprovaram a <span>HowHow</span></h3>
+      <h3 className="hiddenX">Muitas Empresas e Influenciadores já aprovaram a <span>HowHow</span></h3>
       <div className="testimonial-container">
         <Image
           className="testimonial-container-world"
@@ -22,25 +22,33 @@ export default function Testimonials() {
           onMouseLeave={() => setHover('hide')}
         />
         <Image
-          className="testimonial-container-person1"
+          className="testimonial-container-person1 hiddenX"
           src={person1}
           alt='person1'
           priority
           onMouseEnter={() => setHover('show')}
           onMouseLeave={() => setHover('hide')}
         />
-        <div className={`testimonial-container-person1-info-${hover}`}>
+        <div
+          className={`testimonial-container-person1-info-${hover}`}
+          onMouseEnter={() => setHover('show')}
+          onMouseLeave={() => setHover('hide')}
+        >
           <h4>{`"Howhow alavancou minhas vendas em 150%, através de um influenciador digital de moda feminina."`}</h4>
         </div>
         <Image
-          className="testimonial-container-person2"
+          className="testimonial-container-person2 hiddenX"
           src={person2}
           alt='person2'
           priority
           onMouseEnter={() => setHover('show')}
           onMouseLeave={() => setHover('hide')}
         />
-        <div className={`testimonial-container-person2-info-${hover}`}>
+        <div
+          className={`testimonial-container-person2-info-${hover}`}
+          onMouseEnter={() => setHover('show')}
+          onMouseLeave={() => setHover('hide')}
+        >
           <h4>{`"Sou influenciador e tive um grande reconhecimento público na área de games."`}</h4>
         </div>
       </div>

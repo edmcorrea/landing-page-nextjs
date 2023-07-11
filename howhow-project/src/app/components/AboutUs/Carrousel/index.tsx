@@ -7,7 +7,7 @@ export default function Carrousel() {
     <section className="carrousel">
       {brands.map((brand) => (
         <Image
-          className="carrousel-image"
+          className="carrousel-image hiddenY"
           key={brand}
           src={`https://www.howhow.com.br/brands/${brand}.svg`}
           alt={brand}

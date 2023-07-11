@@ -8,7 +8,7 @@ export default function ServiceCompany() {
   return (
     <section className="serv-benefits">
       {APIServicesCompany.map((serv, idx) => (
-        <div key={idx} className="serv-benefits-benefit">
+        <div key={idx} className="serv-benefits-benefit hiddenY">
           <Image
             src={serv.image}
             alt={`${serv.image}`}

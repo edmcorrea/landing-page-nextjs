@@ -7,6 +7,32 @@ $primary-color: rgb(59 130 246);
   
   &-headerHero {
     height: 100vh;
-    // background-image: url("../../../assets/Hero/hero.png");
+    background-image: url("../../../assets/Hero/hero.png");
   }
+}
+
+.hiddenX {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(10%);
+  transition: all 1s;
+}
+
+.hiddenY {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(10%);
+  transition: all 1s;
+}
+
+.showX {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.showY {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
 }
