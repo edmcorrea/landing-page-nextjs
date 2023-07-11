@@ -1,5 +1,4 @@
-# landing-page-nextjs
-# Processo Seletivo - João Pster
+# Landing-Page-nextjs - Processo Seletivo J. Pster
 
 Olá, sejam bem-vindos! Neste repositório foi construída uma Landing Page utilizando `React (com Next.js)` para o front-end e `Express` para o back-end. 
 
@@ -18,13 +17,13 @@ Olá, sejam bem-vindos! Neste repositório foi construída uma Landing Page util
       </td>
       <td width="80px" align="center">
         <span><strong>NextJs</strong></span><br>
-        <img height="45" src="https://nextjs.com/img/logomark.min.svg">
+        <img height="45" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/394px-Nextjs-logo.svg.png?20230404233503">
       </td>
     </tr>
   </tbody>
 </table>
 
-## Instalando as dependências locais do Back-end
+## Instalando as dependências locais do Back-End
 <details>
     <summary>Clique para expandir</summary>
 
@@ -106,8 +105,17 @@ FROM_EMAIL=[INSIRA_AQUI_SEU_EMAIL_UTILIZADO_NO_SENDGRID]
 
 ## Uso 
 
-Inicializado o servidor (terminal backend), a aplicação estará rodando no seguinte caminho: `http://127.0.0.1:3001` ou `http://localhost:3001` e a rota existente é apenas a `/contact`, responsável pela mensageria da aplicação.
-O servidor em execução é responsável pela utilização do `Formulário de Contato` da página Front-End. Nele, assim que um usuário insere os dados solicitados, o servidor é responsável por encaminhar essa mensagem para o e-mail cadastrado no site do `SendGrid`.
+Inicializado o servidor (terminal Back-End), a aplicação estará rodando no seguinte caminho: `http://127.0.0.1:3001` ou `http://localhost:3001` e a rota existente é apenas a `/contact`, responsável pela mensageria da aplicação.
+Por sua vez, a aplicação Front-End estará rodando no caminho: `http://127.0.0.1:3000` ou `http://localhost:3000`, desse modo, podendo ser também navegada.
+O servidor Back-End em execução é responsável pela utilização do `Formulário de Contato` da página Front-End. Nele, assim que um usuário insere os dados solicitados, o servidor é responsável por encaminhar essa mensagem para o e-mail cadastrado no site do `SendGrid`.
+
+## Desafios 
+
+ÈM CONSTRUÇÃO
+
+## Sugestão para futuras implementações 
+
+ÈM CONSTRUÇÃO
     
 ## Documentação
 
