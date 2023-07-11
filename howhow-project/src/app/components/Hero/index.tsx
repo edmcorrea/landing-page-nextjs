@@ -10,7 +10,7 @@ import { useGlobalContext } from "@/app/services/Context-API";
 
 
 export default function Hero() {
-  const { setCompany } = useGlobalContext();
+  const { company, setCompany } = useGlobalContext();
   return (
     <section className="hero">
       <div className="hero-container">
@@ -20,31 +20,31 @@ export default function Hero() {
             A Howhow é uma empresa que conecta marcas a influenciadores, encerre longas esperas por campanhas ou e-mails. Nosso sistema centralizado acelera o marketing de influência, potencializando resultados.
           </h5>
           <div className="hero-container-info-btns hiddenY">
-            <button
-              className="hero-container-info-btns-btn"
-              type="button"
-              onClick={() => setCompany(true)}
-            >
-              <a href="#services">
-                Sou Empresa
-              </a>
-            </button>
-            <button
-              className="hero-container-info-btns-btn"
-              type="button"
-              onClick={() => setCompany(false)}
-            >
-              <a href="#services">
-                Sou Influenciador
-              </a>
-            </button>
+            <a href="#services">
+              <button
+                className={`hero-container-info-btns-btn${company ? '-selected' : ''}`}
+                type="button"
+                onClick={() => setCompany(true)}
+              >
+                  Sou Empresa
+              </button>
+            </a>
+            <a href="#services">
+              <button
+                className={`hero-container-info-btns-btn${!company ? '-selected' : ''}`}
+                type="button"
+                onClick={() => setCompany(false)}
+              >
+                  Sou Influenciador
+              </button>
+            </a>
           </div>
         </section>
         <section>
           <Image
+            className="hero-container-img"
             src={influencersDesk}
             alt="influencersDesk"
-            className="dark:invert"
             priority
           />
         </section>

@@ -19,14 +19,13 @@ export default function ContactUs() {
         <Image
           src="https://www.howhow.com.br/logo.svg"
           alt="howhow-logo"
-          className="dark:invert"
           width={180}
           height={24}
           priority
         />
       </section>
     </div>
-    <div className="contact-forms hiddenX">
+    <div className="contact-forms hiddenY">
       <Forms />
     </div>
   </section>

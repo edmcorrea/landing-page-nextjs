@@ -22,14 +22,17 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: 80%;
   gap: 30px;
 
   &-container {
     position: relative;
+    width: 100%;
 
     &-world {
       position: relative;
       opacity: 0.1;
+      width: 100%;
 
       &-mobile {
         display: none;
@@ -65,7 +68,7 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
 
 @media (max-width: 892px) {
   .testimonial {
-    width: 90%;
+    width: 80%;
     flex-direction: column;
     &-container {
       position: relative;

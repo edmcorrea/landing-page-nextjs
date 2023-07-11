@@ -31,7 +31,7 @@ export default function Testimonials() {
           onMouseLeave={() => setHover('hide')}
         />
         <Image
-          className="testimonial-container-person1 hiddenX"
+          className="testimonial-container-person1"
           src={person1}
           alt='person1'
           priority
@@ -46,7 +46,7 @@ export default function Testimonials() {
           <h4>{`"Howhow alavancou minhas vendas em 150%, através de uma influenciadora digital de moda feminina."`}</h4>
         </div>
         <Image
-          className="testimonial-container-person2 hiddenX"
+          className="testimonial-container-person2"
           src={person2}
           alt='person2'
           priority
