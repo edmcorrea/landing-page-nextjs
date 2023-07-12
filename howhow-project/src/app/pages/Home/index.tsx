@@ -29,8 +29,8 @@ export default function Homepage() {
       </div>
       <AboutUs />
       <OurServices />
-      <ContactUs />
       <Testimonials />
+      <ContactUs />
     </main>
   )
 }

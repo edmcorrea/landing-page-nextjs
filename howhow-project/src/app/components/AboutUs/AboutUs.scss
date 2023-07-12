@@ -41,6 +41,7 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
   }
 
   &-clients {
+    margin-top: 30px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -50,12 +51,26 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
 
 .carrousel {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  height: 180px;
   gap: 15px;
 
-  &-image {
-    width: 80px;
+  white-space: nowrap;
+  animation: bannermove 10s linear infinite;
+
+  &-img {
+    display: flex;
+    align-items: center;
+    width: 180px;
+    margin: 0 0.5em 
+  }
+
+  @keyframes bannermove {
+    0% {
+        transform: translate(30%, 0);
+    }
+    100% {
+        transform: translate(-0%, 0);
+    }
   }
 }
 

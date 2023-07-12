@@ -1,14 +1,14 @@
 import Image from "next/image";
 
 export default function Carrousel() {
-  const brands = ['aliexpress', 'epic', 'freefire', 'hbo', 'jbl', 'bytedance', 'meliuz', 'mondial', 'netflix', 'ontex', 'oreo', 'paramont', 'picpay', 'playstation', 'tiktok', 'universal'];
+  const brands = ['aliexpress', 'epic', 'freefire', 'hbo', 'jbl', 'bytedance', 'meliuz', 'mondial', 'netflix', 'ontex', 'oreo', 'paramont', 'picpay', 'playstation', 'tiktok', 'universal', 'aliexpress', 'epic', 'freefire', 'hbo', 'jbl', 'bytedance', 'meliuz', 'mondial', 'netflix', 'ontex', 'oreo', 'paramont', 'picpay', 'playstation', 'tiktok', 'universal'];
 
   return (
     <section className="carrousel">
       {brands.map((brand) => (
         <div key={brand} className="carrousel-img">
           <Image
-            className="carrousel-image hiddenY"
+            className="carrousel-image"
             src={`https://www.howhow.com.br/brands/${brand}.svg`}
             alt={brand}
             width={150}
