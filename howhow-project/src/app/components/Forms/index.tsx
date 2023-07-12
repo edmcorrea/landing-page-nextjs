@@ -10,6 +10,7 @@ export default function Forms() {
     description: "",
   });
   const [disableBtn, setDisableBtn] = useState(true);
+  const [showDiv, setShowDiv] = useState(false);
 
   const handleChange = (
     e: React.FormEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>
@@ -32,6 +33,8 @@ export default function Forms() {
         email: "",
         description: "",
       });
+      setShowDiv(true);
+      setTimeout(() => setShowDiv(false), 3000);
     } catch (_error) {
       setError(true);
     }
@@ -88,14 +91,20 @@ export default function Forms() {
           />
         </section>
       </div>
-      <button
-        className="forms-btn"
-        type="button"
-        disabled={disableBtn}
-        onClick={sendMail}
-      >
-        Enviar Mensagem
-      </button>
+      {showDiv ? (
+        <div className="exibir3s">
+          Enviado com Sucesso
+        </div>
+      ) : (
+        <button
+          className="forms-btn"
+          type="button"
+          disabled={disableBtn}
+          onClick={sendMail}
+          >
+            Enviar Mensagem
+        </button>)
+      }
     </form>
   );
 }
