@@ -17,7 +17,7 @@ Olá, sejam bem-vindos! Neste repositório foi construída uma Landing Page util
       </td>
       <td width="80px" align="center">
         <span><strong>NextJs</strong></span><br>
-        <img height="45" src="https://iconduck.com/icons/11295/next-js">
+        <img height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg">
       </td>
     </tr>
   </tbody>

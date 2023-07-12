@@ -3,18 +3,18 @@ import './AboutUs.scss';
 import { useEffect, useRef } from "react";
 
 export default function AboutUs() {
-  const aboutSectionRef = useRef<HTMLSectionElement | null>(null);
+  const aboutSectionRef = useRef<HTMLElement>(null);
 
   function animateCounters() {
-    const tempo_intervalo = 5; //ms -> define a velocidade da animação
-    const tempo = 2000; //ms -> define o tempo total da animação
+    const tempo_intervalo = 5;
+    const tempo = 2000;
 
     document.querySelectorAll('.counter-up').forEach(function(element) {
       const count_to = element.getAttribute('data-countTo');
       if (count_to !== null) {
         let count_to_num = parseInt(count_to);
-        let intervalos = tempo / tempo_intervalo; //quantos passos de animação tem
-        let incremento = count_to_num / intervalos; //quanto cada contador deve aumentar
+        let intervalos = tempo / tempo_intervalo;
+        let incremento = count_to_num / intervalos;
         let valor = 0;
         let el = element;
 
@@ -36,7 +36,7 @@ export default function AboutUs() {
     const observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) {
         animateCounters();
-        observer.unobserve(aboutSectionRef.current);
+        observer.unobserve(aboutSectionRef.current!);
       }
     });
 
