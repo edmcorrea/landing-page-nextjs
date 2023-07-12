@@ -5,8 +5,8 @@ export default function Carrousel() {
 
   return (
     <section className="carrousel">
-      {brands.map((brand) => (
-        <div key={brand} className="carrousel-img">
+      {brands.map((brand, idx) => (
+        <div key={idx} className="carrousel-img">
           <Image
             className="carrousel-image"
             src={`https://www.howhow.com.br/brands/${brand}.svg`}
