@@ -60,6 +60,10 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
           color: $primary-color-blur;
         }
 
+        p {
+        text-align: justify;
+        }
+
         &-info {
           display: flex;
           flex-direction: column;

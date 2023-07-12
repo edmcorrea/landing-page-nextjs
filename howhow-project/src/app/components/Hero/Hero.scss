@@ -9,14 +9,19 @@ $primary-color: rgb(59 130 246);
   
   &-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    gap: 30px;
     
     &-info {
       display: flex;
       flex-direction: column;
       gap: 30px;
       width: 40%;
+
+      h5 {
+        text-align: justify;
+      }
 
       &-btns {
         display: flex;

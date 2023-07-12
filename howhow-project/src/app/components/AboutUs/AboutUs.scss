@@ -19,6 +19,10 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
       gap: 30px;
       justify-content: center;
       width: 40%;
+
+      h6 {
+        text-align: justify;
+      }
     }
 
     &-score {

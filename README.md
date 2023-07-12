@@ -17,7 +17,7 @@ Olá, sejam bem-vindos! Neste repositório foi construída uma Landing Page util
       </td>
       <td width="80px" align="center">
         <span><strong>NextJs</strong></span><br>
-        <img height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg">
+        <img height="45" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg">
       </td>
     </tr>
   </tbody>
@@ -36,7 +36,13 @@ Olá, sejam bem-vindos! Neste repositório foi construída uma Landing Page util
   git clone git@github.com:edmcorrea/landing-page-nextjs.git
 ```
 
-- Entre primeiro no diretório Back-End do projeto
+- Entre primeiro no diretório do projeto Landing Page
+
+```bash
+  cd landing-page-nextjs
+```
+
+- Entre no diretório Back-End do projeto
 
 ```bash
   cd backend
@@ -57,6 +63,7 @@ Olá, sejam bem-vindos! Neste repositório foi construída uma Landing Page util
     <summary>Clique para expandir</summary>
 
 ### Obs.: É necessário possuir uma conta no SendGrid!
+<strong>Crie a conta no link:</strong> https://sendgrid.com/
 
 - Dentro da sua conta no <strong>SendGrid</strong> crie um <strong>Sender Verification</strong> acessando: <strong>Settings > Sender Authentication > Single Sender Verification</strong> e insira as informações solicitadas corretamente.
 
@@ -114,16 +121,25 @@ O servidor Back-End em execução é responsável pela utilização do `Formulá
 
 ## Desafios 
 
-ÈM CONSTRUÇÃO
+- `Replicação do site Howhow + Melhorias:` Devido ao pouco tempo para a construção da página, e assim pouco tempo para fazer o seu Design no Figma, optou-se por fazer uma réplica do site da Howhow, implementando algumas melhorias e sugestões de implementação.
+
+- `Linguagem de Estilização:` Por não informar a linguagem de estilização no teste técnico, optou-se por utilizar a linguagem de extensão do CSS, o SASS, por possuir maior domínio.
 
 ## Sugestões para futuras implementações 
 
-ÈM CONSTRUÇÃO
+- `Implementação de novas rotas de navegação:` A página tem um grande potencial de crescimento e melhorias contínuas.
+
+- `Implementação do Banco de Dados Back-End:` Visto que a Howhow ẃ uma empresa com grandes potenciais e uma gama de clientes, uma implementação de página completa trará muitos holofotes aos clientes (Empresas e influenciadores).
+
+- `Estilização com Tailwindcss:` A implementação padrão em estilização de projetos do NextJs é o Tailwindcss. Vale a pena agregar valores nessa linguagem, pois sua praticidade e simplicidade são notáveis. Além disso, a documentação da linguagem é clara e acessível.
+
+- `Página de Testemunhos:` Devido a grande presença online da empresa, ela também possui muitos clientes satisfeitos. Com isso, o componente <strong>Testemunhos</strong> pode ser melhor aproveitado utilizando a mesma lógica porém com mais clientes espalhados no Mapa.
     
 ## Documentação
 
 - [Express](https://expressjs.com/pt-br/)
 - [Next.Js](https://nextjs.org/docs/getting-started/installation)
+- [SASS](https://sass-lang.com/)
 
 ## Feedback
 
