@@ -10,7 +10,7 @@ export default function AboutUs() {
     const tempo = 2000;
 
     document.querySelectorAll('.counter-up').forEach(function(element) {
-      const count_to = element.getAttribute('data-countTo');
+      const count_to = element.getAttribute('data-countto');
       if (count_to !== null) {
         let count_to_num = parseInt(count_to);
         let intervalos = tempo / tempo_intervalo;
@@ -57,21 +57,21 @@ export default function AboutUs() {
           <div className="hiddenX">
             <section className="about-company-score-details">
               <h1>+</h1>
-              <h1 className="counter-up" data-countTo="6916"></h1>
+              <h1 className="counter-up" data-countto="6916"></h1>
             </section>
             <h6>Campanhas realizadas</h6>
           </div>
           <div className="hiddenX">
             <section className="about-company-score-details">
               <h1>+</h1>
-              <h1 className="counter-up" data-countTo="12400"></h1>
+              <h1 className="counter-up" data-countto="12400"></h1>
             </section>
             <h6>Influenciadores cadastrados</h6>
           </div>
           <div className="hiddenX">
             <section className="about-company-score-details">
               <h1>+</h1>
-              <h1 className="counter-up" data-countTo="62"></h1>
+              <h1 className="counter-up" data-countto="62"></h1>
             </section>
             <h6>Empresas cadastradas</h6>
           </div>

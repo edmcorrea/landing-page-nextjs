@@ -3,7 +3,7 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
 
 @mixin padraoStep {
   align-items: center;
-  border: 1px solid $primary-color;
+  border: 1px solid black;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
   margin: 0 5%;
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 30px;
 
   &-container {
     display: flex;
@@ -57,7 +57,7 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
         }
 
         h5 {
-          color: $primary-color-blur;
+          color: $primary-color;
         }
 
         p {
@@ -69,17 +69,24 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
           flex-direction: column;
           gap: 30px;
 
-          h2 {
-            color: $primary-color;
-          }
+          // h2 {
+          //   color: $primary-color;
+          // }
         }
       }
     }
   }
 
+  &-titleBtns {
+    margin-top: 40px;
+
+    text-align: center;
+  }
+
   &-btns {
     display: flex;
-    width: 100%;
+    width: 60%;
+    margin: auto;
     justify-content: space-evenly;
     min-height: 100px;
     gap: 20px;
@@ -87,27 +94,32 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
     &-btn {
       flex-grow: 1;
       font-size: 25px;
-      color: $primary-color;
+      color: black;
       font-weight: 600;
       border-radius: 30px;
-      border-bottom: 1px solid $primary-color;
-      width: 50%;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+      width: 30%;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px;
 
       &-selected {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex-grow: 1;
         font-size: 25px;
-        color: white;
-        background-color: $primary-color;
-        font-weight: 600;
+        color: $primary-color;
+        border: 1.5px solid $primary-color;
         border-radius: 30px;
-        width: 50%;
+        width: 30%;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
-
+        font-weight: 600;
+        
+        h4 {
+          // border-bottom: 1px solid $primary-color;
+        }
       }
 
       &:hover {
-      border: 1px solid $primary-color; 
+        border-bottom: 1px solid $primary-color;
       }
     }
   }
@@ -185,9 +197,11 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
 
     &-btn {
       width: 80%;
+      min-height: 77px;
 
       &-selected {
         width: 80%;
+        min-height: 77px;
       }
     }
     }

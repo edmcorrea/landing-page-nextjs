@@ -49,6 +49,10 @@ export default function OurServices() {
           </div>
         </section>
       </div>
+      <div className="services-titleBtns">
+        <h2 className="hiddenX">E quais vantagens para os serviços que prestamos?</h2>
+        <p className="hiddenX">( Selecione a sua categoria abaixo )</p>
+      </div>
       <div className="services-btns">
         <button
           className={`services-btns-btn${company?'-selected':''}`}

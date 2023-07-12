@@ -140,6 +140,8 @@ O servidor Back-End em execução é responsável pela utilização do `Formulá
 - [Express](https://expressjs.com/pt-br/)
 - [Next.Js](https://nextjs.org/docs/getting-started/installation)
 - [SASS](https://sass-lang.com/)
+- [BootStrap](https://getbootstrap.com/)
+
 
 ## Feedback
 
