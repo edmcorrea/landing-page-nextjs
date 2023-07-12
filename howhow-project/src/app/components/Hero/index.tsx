@@ -15,7 +15,7 @@ export default function Hero() {
     <section className="hero">
       <div className="hero-container">
         <section className="hero-container-info">
-          <h1 className="hiddenX">Influenciadores que impulsionam positivamente o seu negócio.</h1>
+          <h1 className="hiddenX">Influenciadores que impulsionam positivamente o <span className="boldd">seu negócio</span>.</h1>
           <h5 className="hiddenY">
             A Howhow é uma empresa que conecta marcas a influenciadores, encerre longas esperas por campanhas ou e-mails. Nosso sistema centralizado acelera o marketing de influência, potencializando resultados.
           </h5>

@@ -59,6 +59,11 @@ $primary-color: rgb(59 130 246);
   }
 }
 
+.boldd {
+  color: $primary-color;
+  font-weight: 700;
+}
+
 @media (max-width: 992px) {
   .hero {
     &-container {

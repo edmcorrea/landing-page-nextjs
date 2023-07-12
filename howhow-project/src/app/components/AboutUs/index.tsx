@@ -1,9 +1,52 @@
 import Carrousel from "./Carrousel";
 import './AboutUs.scss';
+import { useEffect, useRef } from "react";
 
 export default function AboutUs() {
+  const aboutSectionRef = useRef<HTMLSectionElement | null>(null);
+
+  function animateCounters() {
+    const tempo_intervalo = 5; //ms -> define a velocidade da animação
+    const tempo = 2000; //ms -> define o tempo total da animação
+
+    document.querySelectorAll('.counter-up').forEach(function(element) {
+      const count_to = element.getAttribute('data-countTo');
+      if (count_to !== null) {
+        let count_to_num = parseInt(count_to);
+        let intervalos = tempo / tempo_intervalo; //quantos passos de animação tem
+        let incremento = count_to_num / intervalos; //quanto cada contador deve aumentar
+        let valor = 0;
+        let el = element;
+
+        let timer = setInterval(function() {
+          if (valor >= count_to_num) {
+            valor = count_to_num;
+            clearInterval(timer);
+          }
+
+          let texto = valor.toFixed(0).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+          el.textContent = texto;
+          valor += incremento;
+        }, tempo_intervalo);
+      }
+    });
+  }
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        animateCounters();
+        observer.unobserve(aboutSectionRef.current);
+      }
+    });
+
+    if (aboutSectionRef.current) {
+      observer.observe(aboutSectionRef.current);
+    }
+  }, []);
+
   return (
-    <section id="about" className="about">
+    <section id="about" className="about" ref={aboutSectionRef}>
       <div className="about-company">
         <section className="about-company-info">
           <h3 className="hiddenX">Um pouco da nossa história</h3>
@@ -12,15 +55,24 @@ export default function AboutUs() {
         </section>
         <section className="about-company-score">
           <div className="hiddenX">
-            <h1>+6.916</h1>
+            <section className="about-company-score-details">
+              <h1>+</h1>
+              <h1 className="counter-up" data-countTo="6916"></h1>
+            </section>
             <h6>Campanhas realizadas</h6>
           </div>
           <div className="hiddenX">
-            <h1>+12.400</h1>
+            <section className="about-company-score-details">
+              <h1>+</h1>
+              <h1 className="counter-up" data-countTo="12400"></h1>
+            </section>
             <h6>Influenciadores cadastrados</h6>
           </div>
           <div className="hiddenX">
-            <h1>+62</h1>
+            <section className="about-company-score-details">
+              <h1>+</h1>
+              <h1 className="counter-up" data-countTo="62"></h1>
+            </section>
             <h6>Empresas cadastradas</h6>
           </div>
         </section>
@@ -32,6 +84,5 @@ export default function AboutUs() {
         <Carrousel />
       </div>
     </section>
-
   )
 }

@@ -28,6 +28,11 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
       justify-content: space-around;
       width: 40%;
       gap: 30px;
+
+      &-details {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 
