@@ -18,6 +18,11 @@ $primary-color-blur: rgb(59 130 246/ 0.6);
   width: 150px;
 }
 
+.boldd {
+  color: $primary-color;
+  font-weight: 700;
+}
+
 .testimonial {
   display: flex;
   flex-direction: column;

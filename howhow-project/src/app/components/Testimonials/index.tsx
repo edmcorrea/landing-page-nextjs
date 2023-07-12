@@ -12,7 +12,7 @@ export default function Testimonials() {
   const [hover, setHover] = useState('hide');
   return (
     <section className="testimonial">
-      <h3 className="hiddenX">Muitas Empresas e Influenciadores já aprovaram a <span>HowHow</span></h3>
+      <h3 className="hiddenX">Muitas Empresas e Influenciadores já aprovaram a <span className="boldd">HowHow</span>.</h3>
       <div className="testimonial-container">
         <Image
           className="testimonial-container-world"

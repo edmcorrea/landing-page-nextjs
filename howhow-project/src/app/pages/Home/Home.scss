@@ -5,6 +5,7 @@ $primary-color: rgb(59 130 246);
   flex-direction: column;
   gap: 100px;
   align-items: center;
+  overflow-x: hidden;
   
   &-headerHero {
     height: 100vh;

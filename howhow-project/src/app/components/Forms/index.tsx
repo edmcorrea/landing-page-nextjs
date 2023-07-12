@@ -23,7 +23,7 @@ export default function Forms() {
 
   const sendMail = async () => {
     const { nome, email, description } = form;
-    const html = `Name: ${nome} \nEmail: ${email} \nDescription: ${description}`;
+    const html = `Name: ${nome} **** \nEmail: ${email} **** \nDescription: ${description}`;
 
     try {
       await requestMail("/contact", { html });
